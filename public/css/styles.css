@@ -1,0 +1,105 @@
+body {
+  font-family: Montserrat;
+  font-weight: 600;
+}
+
+.jumbotron {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #d4dae6;
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+}
+
+.site-title {
+  padding-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.site-subtitle {
+  padding-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.at-a-glance {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #e8dfd3;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+.at-a-glance h2 {
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.at-a-glance img {
+  max-width: 50%;
+  height: auto;
+}
+
+.at-a-glance p {
+  padding-bottom: 2rem;
+}
+
+.what-we-do {
+  text-align: center;
+  padding: 4rem 0;
+  background-color: #d4dae6;
+}
+
+.what-we-do h1 {
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+  font-weight: 700;
+}
+
+.card {
+  background-color: #d4dae6;
+}
+
+.image-card {
+  text-align: center;
+}
+.card-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.card-body {
+  padding-top: 2rem;
+}
+
+.quote-section {
+  text-align: center;
+  background-color: gainsboro;
+  padding: 4rem 0;
+  background-color: #e8dfd3;
+}
+
+.contact-us-section {
+  text-align: center;
+  padding: 4rem 0;
+  background-color: #d4dae6;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+.contact-us-section h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.email {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.bottom-btn {
+  margin: 0 0.5rem 0 0.5rem;
+}

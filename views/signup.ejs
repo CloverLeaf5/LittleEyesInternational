@@ -1,0 +1,23 @@
+<%- include("partials/header"); -%>
+  </head>
+  <body>
+    <h2 style="text-align: center; padding: 50px 0 50px 0;">Signup to stay updated</h2>
+
+    <form action="/subscribe" method="post" class="mx-auto" style="width: 400px;">
+      <div class="mb-3">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" name="firstName" id="firstName">
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" name="lastName" id="lastName">
+      </div>
+      <div class="mb-3">
+        <label for="emailInput" class="form-label">Email address</label>
+        <input type="email" class="form-control" name="emailInput" id="emailInput" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </body>
+</html>
