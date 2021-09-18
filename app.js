@@ -14,7 +14,14 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
-app.use(helmet());
+app.use(helmet.contentSecurityPolicy({
+				 directives:{
+				   defaultSrc:["'self'"],
+           imgSrc: ["'self'", '*'],
+				   scriptSrc:["'self'",'donorbox.org','maxcdn.bootstrapcdn.com','cdn.jsdelivr.net'],
+				   styleSrc:["'self'",'maxcdn.bootstrapcdn.com', "'unsafe-inline'", '*'],
+           frameSrc:['donorbox.org'],
+				   fontSrc:["'self'",'*']}}));
 
 app.get("/", function(req, res){
   res.render("home");

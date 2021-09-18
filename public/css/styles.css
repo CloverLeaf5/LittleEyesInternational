@@ -103,3 +103,15 @@ body {
 .bottom-btn {
   margin: 0 0.5rem 0 0.5rem;
 }
+
+.success {
+  text-align: center;
+}
+
+.failure {
+  text-align: center;
+}
+
+.failure .email{
+  padding-top: 0
+}
