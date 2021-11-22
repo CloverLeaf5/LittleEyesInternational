@@ -83,6 +83,16 @@ body {
   background-color: #e8dfd3;
 }
 
+.quote-section ol {
+  text-align: left;
+  padding: 0 4rem
+}
+
+.quote-section h5 {
+  text-align: justify;
+  padding: 0 4rem 0 4rem;
+}
+
 .contact-us-section {
   text-align: center;
   padding: 4rem 0;
