@@ -1,34 +1,38 @@
 body {
-  font-family: Montserrat;
-  font-weight: 600;
+  /* font-family: Montserrat; */
+  /* font-weight: 600; */
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
+  color: #112D4E;
 }
 
 .jumbotron {
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background-color: #d4dae6;
-  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  background-color: #DFF4F3;
+  /* background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png"); */
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
 }
 
 .site-title {
   padding-bottom: 2rem;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 700;
 }
 
 .site-subtitle {
   padding-bottom: 2rem;
   font-size: 2rem;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .at-a-glance {
   text-align: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: #e8dfd3;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  background-color: #B9BBDF;
+  background-image: url("https://www.transparenttextures.com/patterns/corrugation.png");
 }
 
 .at-a-glance h2 {
@@ -49,18 +53,22 @@ body {
 
 .what-we-do {
   text-align: center;
-  padding: 4rem 0;
-  background-color: #d4dae6;
+  padding: 2rem 0;
+  background-color: #878ECD;
+  color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/green-gobbler.png");
 }
 
 .what-we-do h1 {
   text-transform: uppercase;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   font-weight: 700;
+  font-size: 4rem;
 }
 
 .card {
-  background-color: #d4dae6;
+  background-color: #DFF4F3;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
 }
 
 .image-card {
@@ -80,7 +88,9 @@ body {
   text-align: center;
   background-color: gainsboro;
   padding: 4rem 0;
-  background-color: #e8dfd3;
+  /* background-color: #e8dfd3; */
+  background-color: #878ECD;
+  color: #ffffff;
 }
 
 .quote-section ol {
@@ -96,7 +106,7 @@ body {
 .contact-us-section {
   text-align: center;
   padding: 4rem 0;
-  background-color: #d4dae6;
+  background-color: #B9BBDF;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
 
