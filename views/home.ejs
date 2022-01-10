@@ -1,21 +1,62 @@
 <%- include("partials/header"); -%>
 
-<body>
-  <div class="jumbotron">
-    <h1 class="site-title">Little Eyes International</h1>
-    <h4 class="site-subtitle">Give the gift of vision today</h4>
-    <a class="btn btn-primary" href="/signup">Stay informed</a>
-    <a class="btn btn-default top-donate-btn" href="/donate" style="background: #41a2d8 url(https://donorbox.org/images/red_logo.png) no-repeat 15px;color: #fff;text-decoration: none;display: inline-block;font-size: 16px;padding: 7px 15px 7px 50px;">
-      Donate </a>
-    <br> <br> <br>
-    <h5>Have glasses to donate?</h5>
-    <h6>ABC Children's Eye Specialists are collecting glasses at any of their locations by mail or in person</h6 <h6><a href="https://www.abckidseyes.com/contactus">ABC Children's Eye Specialists</a></h6>
-  </div>
+<!-- Updates:
+- Updated title to 4.5rem from 5rem to fit
+- Added navbar - commented out for now
+- Added margins to top buttons
+- Reactive style padding in Quote Section
+-->
 
-  <div class="at-a-glance">
-    <img src="images/sunglasses.jpg" alt="Child with sunglasses">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="images/favicon.png" alt="LEI Logo" width="30" height="24" class="d-inline-block align-text-top">
+        Little Eyes International
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown link
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
 
-    <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div class="jumbotron">
+  <h1 class="site-title">Little Eyes International</h1>
+  <h4 class="site-subtitle">Give the gift of vision today</h4>
+  <a class="btn btn-primary top-btn" href="/signup">Stay informed</a>
+  <a class="btn btn-default top-btn" href="/donate" style="background: #41a2d8 url(https://donorbox.org/images/red_logo.png) no-repeat 15px;color: #fff;text-decoration: none;display: inline-block;font-size: 16px;padding: 7px 15px 7px 50px;">
+    Donate </a>
+  <br> <br> <br>
+  <h5>Have glasses to donate?</h5>
+  <h6>ABC Children's Eye Specialists are collecting glasses at any of their locations by mail or in person</h6 <h6><a href="https://www.abckidseyes.com/contactus">ABC Children's Eye Specialists</a></h6>
+</div>
+
+<div class="at-a-glance">
+  <img src="images/sunglasses.jpg" alt="Child with sunglasses">
+
+  <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block w-100" src="..." alt="First slide">
@@ -37,109 +78,112 @@
       </a>
     </div> -->
 
-    <h2>Little Eyes International at a glance</h2>
-    <p>As pediatric eye care providers, our goal is to offer optical, clinical, and surgical
-      eye care services to underserved children in Arizona and Mexico. Our mission is to prevent
-      and cure childhood blindness in patients from all socioeconomic backgrounds.</p>
-  </div>
+  <h2>Little Eyes International at a glance</h2>
+  <p>As pediatric eye care providers, our goal is to offer optical, clinical, and surgical
+    eye care services to underserved children in Arizona and Mexico. Our mission is to prevent
+    and cure childhood blindness in patients from all socioeconomic backgrounds.</p>
+</div>
 
-  <div class="what-we-do">
-    <h1>What we do</h1>
-    <!-- <h4>Seeing A Difference</h4> -->
-  </div>
+<div class="what-we-do">
+  <h1>What we do</h1>
+  <!-- <h4>Seeing A Difference</h4> -->
+</div>
 
-  <div class="tiled-section">
+<div class="tiled-section">
 
-    <div class="card-group">
-      <div class="card image-card">
-        <img class="card-img" src="images/beforeBMR.jpg" alt="Child before surgery">
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title">Need for Eye Care</h2>
-          <p class="card-text">Globally, there is a shortage of pediatric ophthalmologists and optometrists. The shortage of adequate
-            eye care providers limits access for underserved children who are uninsured or underinsured to receive the health care they
-            need to prevent abnormal visual development.</p>
-          <p class="card-text">OneSight partnered with Deloitte to conduct an extensive study and determined that 1.1 billion people
-            worldwide suffer from vision loss and lack access to vision care. For all of them,
-            vision can be restored with a simple pair of glasses.</p>
-          <p class="card-text">According to the American Academy of Pediatric Ophthalmology and Strabismus 19 million children 
-            worldwide are visually impaired and 80% of visual impairment can be prevented or cured.</p>
-        </div>
-      </div>
-      <div class="card image-card">
-        <img class="card-img" src="images/afterBMR.jpg" alt="Child after surgery">
+  <div class="card-group">
+    <div class="card image-card">
+      <img class="card-img" src="images/beforeBMR.jpg" alt="Child before surgery">
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Need for Eye Care</h2>
+        <p class="card-text">Globally, there is a shortage of pediatric ophthalmologists and optometrists. The shortage of adequate
+          eye care providers limits access for underserved children who are uninsured or underinsured to receive the health care they
+          need to prevent abnormal visual development.</p>
+        <p class="card-text">OneSight partnered with Deloitte to conduct an extensive study and determined that 1.1 billion people
+          worldwide suffer from vision loss and lack access to vision care. For all of them,
+          vision can be restored with a simple pair of glasses.</p>
+        <p class="card-text">According to the American Academy of Pediatric Ophthalmology and Strabismus 19 million children
+          worldwide are visually impaired and 80% of visual impairment can be prevented or cured.</p>
       </div>
     </div>
+    <div class="card image-card">
+      <img class="card-img" src="images/afterBMR.jpg" alt="Child after surgery">
+    </div>
+  </div>
 
-    <div class="card-group">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title">Medical Services</h2>
-          <ul class="card-text">
-            <li>Complete eye exams</li>
-            <li>Evaluation for glasses</li>
-            <li>Diagnosis and treatment of Amblyopia, Strabismus, and other childhood ocular diseases</li>
-            <li>Access to glasses</li>
-            <li>Eye care education</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card image-card">
-        <img class="card-img" src="images/selfie.jpg" alt="Selfie of surgeons">
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title">Surgical services</h2>
-          <ul class="card-text">
-            <li>Strabismus (eye crossing or drifting)</li>
-            <li>Nasolacrimal duct obstruction (eye tearing)</li>
-            <li>Excisional removal of eyelid growths</li>
-            <li>Congenital ptosis (droopy eyelid)</li>
-          </ul>
-        </div>
+  <div class="card-group">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Medical Services</h2>
+        <ul class="card-text">
+          <li>Complete eye exams</li>
+          <li>Evaluation for glasses</li>
+          <li>Diagnosis and treatment of Amblyopia, Strabismus, and other childhood ocular diseases</li>
+          <li>Access to glasses</li>
+          <li>Eye care education</li>
+        </ul>
       </div>
     </div>
-
+    <div class="card image-card">
+      <img class="card-img" src="images/selfie.jpg" alt="Selfie of surgeons">
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Surgical services</h2>
+        <ul class="card-text">
+          <li>Strabismus (eye crossing or drifting)</li>
+          <li>Nasolacrimal duct obstruction (eye tearing)</li>
+          <li>Excisional removal of eyelid growths</li>
+          <li>Congenital ptosis (droopy eyelid)</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <div class="quote-section">
-    <h5>Most causes of childhood blindness are preventable if children receive eye care and treatment from a young age.
-      Unfortunately many children in developing countries and even the United States do not have access to this
-      standard medical care. Our organization is dedicated to preventing blindness and improving vision to children
-      in need. Our current efforts are focused in Sonoyta and Puerto Peñasco, Mexico where we run a monthly eye clinic.
+</div>
 
-      We currently have two major fundraising goals:
-      <ol>
-        <li>Raising funds to purchase the equipment needed to make eye glasses in Puerto Peñasco</li>
-        <li>Raising funds to set up operating rooms and provide surgical care to children who need sight saving procedures</li>
-      </ol>
-    </h5>
-    <br><br>
-    <h2>"Great things are done by a series of small things brought together."</h2>
-    <h4>Vincent van Gogh</h4>
-  </div>
+<div class="quote-section">
+  <h5 class="px-4">Most causes of childhood blindness are preventable if children receive eye care and treatment from a young age.
+    Unfortunately many children in developing countries and even the United States do not have access to this
+    standard medical care. Our organization is dedicated to preventing blindness and improving vision to children
+    in need. Our current efforts are focused in Sonoyta and Puerto Peñasco, Mexico where we run a monthly eye clinic.
 
-
-  <div class="contact-us-section">
-    <h1>Contact Little Eyes International</h1>
-    <hr>
-    <a class="btn btn-primary bottom-btn" href="/signup">Stay informed</a>
-    <a class="btn btn-default bottom-btn" href="/donate" style="background: #41a2d8 url(https://donorbox.org/images/red_logo.png) no-repeat 15px;color: #fff;text-decoration: none;display: inline-block;font-size: 16px;padding: 7px 15px 7px 50px;">
-      Donate </a>
-    <br><br>
-    <h3>Follow us on Facebook: Little Eyes International</h3>
-    <h3>Follow us on Instagram: @LittleEyesInternational</h3>
-    <a href="mailto:LittleEyesInternational@gmail.com?subject=Wanted to connect!">
-      <h3 class="email">LittleEyesInternational@gmail.com</h3>
-    </a>
-
-  </div>
+    We currently have two major fundraising goals:
+    <ol>
+      <li class="ps-3">Raising funds to purchase the equipment needed to make eye glasses in Puerto Peñasco</li>
+      <li class="ps-3">Raising funds to set up operating rooms and provide surgical care to children who need sight saving procedures</li>
+    </ol>
+  </h5>
+  <br><br>
+  <h2 class="px-4">"Great things are done by a series of small things brought together."</h2>
+  <h4>Vincent van Gogh</h4>
+</div>
 
 
-  <!-- Bootstrap JS Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<div class="contact-us-section">
+  <h1>Contact Little Eyes International</h1>
+  <hr>
+  <a class="btn btn-primary bottom-btn" href="/signup">Stay informed</a>
+  <a class="btn btn-default bottom-btn" href="/donate" style="background: #41a2d8 url(https://donorbox.org/images/red_logo.png) no-repeat 15px;color: #fff;text-decoration: none;display: inline-block;font-size: 16px;padding: 7px 15px 7px 50px;">
+    Donate </a>
+  <br><br>
+  <h3>Follow us on Facebook: Little Eyes International</h3>
+  <h3>Follow us on Instagram: @LittleEyesInternational</h3>
+  <!-- <h3>Follow us:</h3>
+  <h4><a class="btn btn-dark" href="https://www.facebook.com/littleeyesinternational/">
+    <i class="fa-brands fa-facebook-square"></i>Facebook</a></h4>
+  <br>
+  <h4><a class="btn btn-dark" href="https://www.instagram.com/littleeyesinternational/">
+    <i class="fa-brands fa-instagram-square"></i>@LittleEyesInternational</a></h4>
+  <br><br> -->
 
-</body>
+  <a href="mailto:LittleEyesInternational@gmail.com?subject=Wanted to connect!">
+    <h3 class="email">LittleEyesInternational@gmail.com</h3>
+  </a>
 
-</html>
+</div>
+
+
+<%- include("partials/footer"); -%>
