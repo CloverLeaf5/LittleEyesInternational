@@ -40,6 +40,10 @@ app.get("/donate", function(req, res) {
   res.render("donate");
 })
 
+app.get("/about", function(req, res) {
+  res.render("about");
+})
+
 // Post request to subscribe to Mailchimp mail list
 app.post("/subscribe", function(req, res) {
   const fName = req.body.firstName;

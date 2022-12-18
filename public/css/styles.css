@@ -125,6 +125,24 @@ body {
   font-weight: 700;
 }
 
+.contact-us-section h3 {
+  font-weight: 600;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 1rem;
+}
+
+.social-btn {
+  border: 3px solid transparent;
+  color: #212529;
+  border-color: #212529;
+  font-weight: 600;
+}
+
 .email {
   padding-top: 2.5rem;
   padding-bottom: 2rem;
@@ -132,6 +150,16 @@ body {
 
 .bottom-btn {
   margin: 0 0.5rem 0 0.5rem;
+}
+
+.about-us-section {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  background-color: #B9BBDF;
+  background-image: url("https://www.transparenttextures.com/patterns/corrugation.png");
 }
 
 .success {
