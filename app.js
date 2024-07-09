@@ -44,6 +44,10 @@ app.get("/about", function(req, res) {
   res.render("about");
 })
 
+app.get("/blog", function(req, res) {
+  res.render("blog");
+})
+
 // Post request to subscribe to Mailchimp mail list
 app.post("/subscribe", function(req, res) {
   const fName = req.body.firstName;
@@ -91,6 +95,6 @@ app.post("/subscribe", function(req, res) {
 
 
 // Start the server
-app.listen(3000, '0.0.0.0', function(){
-  console.log("Server started on port 3000.");
+app.listen(3005, '0.0.0.0', function(){
+  console.log("Server started on port 3005.");
 });
