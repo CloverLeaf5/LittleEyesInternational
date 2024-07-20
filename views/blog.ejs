@@ -1,0 +1,24 @@
+<%- include("partials/header"); -%>
+<%- include("partials/navbar"); -%>
+
+<div class="blog">
+    <h2><%= title %></h2>
+
+    <h3><%= date %></h3>
+
+    <% for (let i = 0; i < bodyArray.length; i++) { %>
+      <% let photoIDX = 0 %>
+      <% if (bodyArray[i].includes("^^^^^")) { %>
+        <img src=<%= photoURLs[photoIDX] %> alt="Child before surgery">
+        <% photoIDX += 1 %>
+      <% } else { %>
+        <p><%= bodyArray[i] %> </p>
+      <% } %>
+    <% } %>
+
+    <p></p>
+    <a class="btn btn-primary bottom-btn" href="/">Go Back</a>
+</div>
+
+
+<%- include("partials/footer"); -%>
