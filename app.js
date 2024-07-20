@@ -193,6 +193,6 @@ app.post("/resetDBTimer", function(req, res) {
 
 
 // Start the server
-app.listen(3005, '0.0.0.0', function(){
-  console.log("Server started on port 3005.");
+app.listen(3000, '0.0.0.0', function(){
+  console.log("Server started on port 3000.");
 });
