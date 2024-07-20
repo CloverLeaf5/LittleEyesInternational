@@ -1,12 +1,22 @@
 <%- include("partials/header"); -%>
 <%- include("partials/navbar"); -%>
 
-<div class="about-us-section">
-    <h2>This will be the title of the page</h2>
-    <p>
-        This will include the body of the post. There will be pictures, and it will be beautiful.
-    </p>
+<div class="blog">
+    <h2><%= title %></h2>
 
+    <h3><%= date %></h3>
+
+    <% for (let i = 0; i < bodyArray.length; i++) { %>
+      <% let photoIDX = 0 %>
+      <% if (bodyArray[i].includes("^^^^^")) { %>
+        <img src=<%= photoURLs[photoIDX] %> alt="Child before surgery">
+        <% photoIDX += 1 %>
+      <% } else { %>
+        <p><%= bodyArray[i] %> </p>
+      <% } %>
+    <% } %>
+
+    <p></p>
     <a class="btn btn-primary bottom-btn" href="/">Go Back</a>
 </div>
 
