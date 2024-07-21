@@ -190,6 +190,9 @@ app.post("/resetDBTimer", function(req, res) {
 	const authCode = req.body.authCode;
 	if (authCode === process.env.DB_AUTH_CODE) {
 		lastUpdateTime = Date.now() - (60*60*1000);
+		res.sendStatus(200);
+	} else {
+		res.sendStatus(401);
 	}
 });
 
