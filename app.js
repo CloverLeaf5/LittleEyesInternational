@@ -186,6 +186,10 @@ app.post("/subscribe", function(req, res) {
 // Allows backend to immediately request updated data from DynamoDB
 // Otherwise, it only requests new data up to once per hour
 app.post("/resetDBTimer", function(req, res) {
+	if (!req.body.authCode) {
+		res.sendStatus(401);
+		return;
+	}
 	const authCode = req.body.authCode;
 	if (authCode === process.env.DB_AUTH_CODE) {
 		lastUpdateTime = Date.now() - (60*60*1000);
