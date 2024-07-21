@@ -185,16 +185,12 @@ app.post("/subscribe", function(req, res) {
 
 // Post request to subscribe to Mailchimp mail list
 app.post("/resetDBTimer", function(req, res) {
-	console.log("Hit the endpoint with body:");
-	console.log(req.body);
 	const authCode = req.body.authCode;
 	if (authCode === process.env.DB_AUTH_CODE) {
 		lastUpdateTime = Date.now() - (60*60*1000);
-		res.status(200);
-   	res.send('Success');
+		res.sendStatus(200);
 	} else {
-		res.status(401);
-   	res.send('Unauthorized');
+		res.sendStatus(401);
 	}
 });
 
