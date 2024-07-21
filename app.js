@@ -9,6 +9,7 @@ const helmet = require("helmet");
 const AWS = require("aws-sdk");
 
 // GLOBAL TIME VARIABLE AND CACHE OF DB DATA
+// ONLY UPDATES ONCE PER HOUR UNLESS DYNAMODB IS UPDATED
 let lastUpdateTime = 0;
 let lastDBData = {
 	title: "Under construction",
@@ -183,7 +184,9 @@ app.post("/subscribe", function(req, res) {
 });
 
 
-// Post request to subscribe to Mailchimp mail list
+// Called by AWS if DynamoDB is updated.
+// Allows backend to immediately request updated data from DynamoDB
+// Otherwise, it only requests new data up to once per hour
 app.post("/resetDBTimer", function(req, res) {
 	const authCode = req.body.authCode;
 	if (authCode === process.env.DB_AUTH_CODE) {
