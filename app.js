@@ -89,8 +89,6 @@ app.get("/blog", async function(req, res) {
 		}
 	);
 
-	console.log(mostRecent);
-
 	// Get data from DynamoDB Query
 	const title = mostRecent.title.S;
 	const date = mostRecent.displayDate.S;
