@@ -1,20 +1,26 @@
 <%- include("partials/header"); -%>
+<%- include("partials/navbar"); -%>
 
-  <div class="failure">
-    <h1 style="padding: 50px 0 50px 0;">Something went wrong</h1>
-    <br>
-    <br>
-    <a class="btn btn-primary bottom-btn" href="/signup">Try Again</a>
-    <a class="btn btn-primary bottom-btn" href="/">Return Home</a>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p>If you continue to have trouble, let us know.</p>
-    <a href="mailto:LittleEyesInternational@gmail.com?subject=Had trouble signing up for updates">
-      <h5 class="email">LittleEyesInternational@gmail.com</h5>
-    </a>
-
+<main>
+  <div class="form-section">
+    <div class="container">
+      <div class="status-card">
+        <div class="status-icon">&#9888;&#65039;</div>
+        <h1>Something went wrong</h1>
+        <p>We weren't able to sign you up. Please try again, or reach out to us directly.</p>
+        <div class="status-card__buttons">
+          <a class="btn btn-primary" href="/signup">Try Again</a>
+          <a class="btn btn-secondary" href="/">Return Home</a>
+        </div>
+        <p style="margin-top: 32px; margin-bottom: 0;">
+          If you continue to have trouble, email us at<br />
+          <a href="mailto:LittleEyesInternational@gmail.com?subject=Had trouble signing up for updates" style="color: var(--teal-dark); font-weight: 600;">
+            LittleEyesInternational@gmail.com
+          </a>
+        </p>
+      </div>
+    </div>
   </div>
+</main>
 
 <%- include("partials/footer"); -%>

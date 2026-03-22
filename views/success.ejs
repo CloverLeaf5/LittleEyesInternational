@@ -1,10 +1,20 @@
 <%- include("partials/header"); -%>
+<%- include("partials/navbar"); -%>
 
-  <div class="success">
-    <h1 style="padding: 50px 0 50px 0;">You're all set!</h1>
-    <br>
-    <br>
-    <a class="btn btn-primary bottom-btn" href="/">Main Page</a>
+<main>
+  <div class="form-section">
+    <div class="container">
+      <div class="status-card">
+        <div class="status-icon">&#10003;</div>
+        <h1>You're all set!</h1>
+        <p>Thanks for signing up. We'll keep you updated on our work and how you can help give children the gift of clear vision.</p>
+        <div class="status-card__buttons">
+          <a class="btn btn-primary" href="/">Back to Home</a>
+          <a class="btn btn-secondary" href="/donate">Donate Now</a>
+        </div>
+      </div>
+    </div>
   </div>
+</main>
 
 <%- include("partials/footer"); -%>

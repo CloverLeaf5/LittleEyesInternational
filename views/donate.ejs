@@ -1,10 +1,36 @@
 <%- include("partials/header"); -%>
+<%- include("partials/navbar"); -%>
 
-  <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>
-  <iframe src="https://donorbox.org/embed/little-eyes-international" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0"
-    scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; max-height:none!important"></iframe>
+<main>
+  <div class="donate-section">
+    <div class="container">
+      <div class="donate-section__inner">
 
-  <p></p>
-  <a class="btn btn-primary bottom-btn" href="/">Go Home</a>
+        <div class="donate-section__heading">
+          <div class="eyebrow">Make a difference</div>
+          <h1>Donate to Little Eyes International</h1>
+          <p>Your gift helps provide vision screenings, glasses, and surgical care to children who need it most.</p>
+        </div>
+
+        <div class="donate-section__widget">
+          <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>
+          <iframe
+            src="https://donorbox.org/embed/little-eyes-international"
+            name="donorbox"
+            allowpaymentrequest="allowpaymentrequest"
+            seamless="seamless"
+            frameborder="0"
+            scrolling="no"
+            height="900px"
+            width="100%"
+            style="max-width: 500px; min-width: 250px; max-height: none !important;">
+          </iframe>
+          <a class="btn btn-secondary" href="/">&#8592; Back to Home</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
 
 <%- include("partials/footer"); -%>

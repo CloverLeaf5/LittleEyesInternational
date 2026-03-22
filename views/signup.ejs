@@ -1,22 +1,32 @@
 <%- include("partials/header"); -%>
+<%- include("partials/navbar"); -%>
 
-    <h2 style="text-align: center; padding: 50px 0 50px 0;">Signup to stay updated</h2>
-
-    <form action="/subscribe" method="post" class="mx-auto" style="width: 400px;">
-      <div class="mb-3">
-        <label for="firstName" class="form-label">First Name</label>
-        <input type="text" class="form-control" name="firstName" id="firstName">
+<main>
+  <div class="form-section">
+    <div class="container">
+      <div class="form-card">
+        <div class="eyebrow">Stay connected</div>
+        <h2>Sign Up for Updates</h2>
+        <p>We'll keep you informed about our work and how you can help.</p>
+        <form action="/subscribe" method="post">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" name="firstName" id="firstName">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" name="lastName" id="lastName">
+          </div>
+          <div class="form-group">
+            <label for="emailInput">Email Address</label>
+            <input type="email" class="form-control" name="emailInput" id="emailInput">
+            <div class="form-hint">We'll never share your email with anyone else.</div>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">Subscribe</button>
+        </form>
       </div>
-      <div class="mb-3">
-        <label for="lastName" class="form-label">Last Name</label>
-        <input type="text" class="form-control" name="lastName" id="lastName">
-      </div>
-      <div class="mb-3">
-        <label for="emailInput" class="form-label">Email address</label>
-        <input type="email" class="form-control" name="emailInput" id="emailInput" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
+  </div>
+</main>
 
 <%- include("partials/footer"); -%>

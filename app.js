@@ -33,8 +33,8 @@ app.use(helmet.contentSecurityPolicy({
 				 directives:{
 				   defaultSrc:["'self'"],
            imgSrc: ["'self'", '*'],
-				   scriptSrc:["'self'",'donorbox.org','maxcdn.bootstrapcdn.com','cdn.jsdelivr.net','kit.fontawesome.com'],
-				   styleSrc:["'self'",'maxcdn.bootstrapcdn.com', "'unsafe-inline'", '*'],
+				   scriptSrc:["'self'",'donorbox.org'],
+				   styleSrc:["'self'", "'unsafe-inline'", '*'],
            frameSrc:['donorbox.org'],
 				   fontSrc:["'self'",'*']}}));
 

@@ -1,206 +1,851 @@
+/* ============================================================
+   CSS Custom Properties
+   ============================================================ */
+:root {
+  --navy: #173a6a;
+  --teal: #18a9c7;
+  --teal-dark: #0f91ae;
+  --yellow: #f2c94c;
+  --bg: #f7fbff;
+  --white: #ffffff;
+  --text: #24364b;
+  --muted: #5f6f82;
+  --line: #dde7f1;
+  --shadow: 0 10px 30px rgba(18, 48, 88, 0.08);
+  --radius: 22px;
+  --max: 1180px;
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  /* font-family: Montserrat; */
-  /* font-weight: 600; */
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: 300;
-  color: #112D4E;
+  margin: 0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(24, 169, 199, 0.10), transparent 16%),
+    radial-gradient(circle at 85% 12%, rgba(242, 201, 76, 0.10), transparent 14%),
+    linear-gradient(180deg, #f9fcff 0%, #f4f9fd 100%);
+  min-height: 100vh;
 }
 
-.navbar-toggler-icon {
-  background-image: url("../images/hamburger.png") !important;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.jumbotron {
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  background-color: #DFF4F3;
-  /* background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png"); */
-  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.site-title {
-  padding-bottom: 2rem;
-  font-size: 4.5rem;
-  font-weight: 700;
+h1, h2, h3 {
+  margin: 0;
+  color: var(--navy);
+  line-height: 1.08;
 }
 
-.site-subtitle {
-  padding-bottom: 2rem;
-  font-size: 2rem;
-  /* font-weight: 600; */
+p {
+  line-height: 1.7;
+  margin: 0;
+  color: var(--muted);
 }
 
-.top-btn {
-  margin: 0 0.5rem 0 0.5rem;
+ul {
+  margin: 0;
+  padding-left: 1.4rem;
 }
 
-.at-a-glance {
-  text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  background-color: #B9BBDF;
-  background-image: url("https://www.transparenttextures.com/patterns/corrugation.png");
+li {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 6px;
 }
 
-.at-a-glance h2 {
+/* ============================================================
+   Layout Utilities
+   ============================================================ */
+.container {
+  width: min(calc(100% - 32px), var(--max));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 78px 0;
+}
+
+.eyebrow {
+  color: var(--teal-dark);
+  font-weight: 800;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 2rem 0;
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  margin-bottom: 14px;
 }
 
-.at-a-glance img {
-  max-width: 80%;
-  height: auto;
-}
-
-.at-a-glance p {
-  padding-bottom: 2rem;
-}
-
-.what-we-do {
+.section-heading {
   text-align: center;
-  padding: 2rem 0;
-  background-color: #878ECD;
-  color: #ffffff;
-  background-image: url("https://www.transparenttextures.com/patterns/green-gobbler.png");
+  margin-bottom: 34px;
 }
 
-.what-we-do h1 {
-  text-transform: uppercase;
-  padding-bottom: 1rem;
+.section-heading h2 {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 28px;
+  border-radius: 14px;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  transition: 0.22s ease;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--teal), var(--teal-dark));
+  color: white;
+  box-shadow: 0 10px 22px rgba(24, 169, 199, 0.22);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(24, 169, 199, 0.28);
+  color: white;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--navy);
+  border-color: #d7e3ee;
+  box-shadow: var(--shadow);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  color: var(--navy);
+}
+
+/* ============================================================
+   Header / Navbar
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(249, 252, 255, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(221, 231, 241, 0.75);
+}
+
+.site-header__inner {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.brand__logo {
+  height: 44px;
+  width: auto;
+  flex: 0 0 auto;
+  display: block;
+}
+
+.brand__text {
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.05;
+  font-size: 0.98rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.nav a {
+  opacity: 0.9;
+}
+
+.nav a:hover {
+  opacity: 1;
+  color: var(--teal-dark);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 1.8rem;
+  color: var(--navy);
+  cursor: pointer;
+}
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero {
+  padding: 46px 0 36px;
+}
+
+.hero__card {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(216, 240, 248, 0.9), rgba(255,255,255,0.96));
+  border: 1px solid #dfe9f2;
+  border-radius: 34px;
+  box-shadow: var(--shadow);
+}
+
+.hero__content {
+  padding: 64px 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__content h1 {
+  font-size: clamp(2.5rem, 5vw, 4.3rem);
+  margin-bottom: 22px;
+}
+
+.hero__content p {
+  font-size: 1.2rem;
+  max-width: 580px;
+  margin-bottom: 32px;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero__media {
+  min-height: 540px;
+  background: url("../images/ImageTopHome.png") center/cover no-repeat;
+  position: relative;
+}
+
+.hero__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(247,251,255,0.18) 0%, rgba(247,251,255,0) 36%);
+}
+
+/* ============================================================
+   Impact Strip
+   ============================================================ */
+.impact {
+  padding: 26px 0;
+}
+
+.impact__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: rgba(255,255,255,0.82);
+  border: 1px solid #e0e8f0;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.impact__item {
+  padding: 28px 24px;
+  text-align: center;
+  border-right: 1px solid var(--line);
+}
+
+.impact__item:last-child {
+  border-right: 0;
+}
+
+.impact__number {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.impact__label {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.impact__highlight {
+  color: var(--yellow);
+  font-weight: 800;
+}
+
+/* ============================================================
+   Problem / Why it Matters
+   ============================================================ */
+.problem__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px;
+  align-items: center;
+}
+
+.problem h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 24px;
+  max-width: 550px;
+}
+
+.problem .accent {
+  color: #d9a90f;
+}
+
+.problem__copy p + p {
+  margin-top: 16px;
+}
+
+.vision-card {
+  background: white;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid #e1e9f2;
+  box-shadow: var(--shadow);
+}
+
+.vision-card__split {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+}
+
+.vision-card__panel {
+  min-height: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-card__panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.vision-card__labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f8fbfe;
+  border-top: 1px solid #e1e9f2;
+}
+
+.vision-card__labels div {
+  text-align: center;
+  padding: 14px 10px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   Services
+   ============================================================ */
+.services {
+  background: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(245,250,254,0.85));
+  border-top: 1px solid #eef3f8;
+  border-bottom: 1px solid #eef3f8;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
 
 .card {
-  background-color: #DFF4F3;
-  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  background: white;
+  border-radius: 24px;
+  padding: 28px 24px;
+  border: 1px solid #e2ebf3;
+  box-shadow: var(--shadow);
+  transition: 0.22s ease;
 }
 
-.image-card {
-  text-align: center;
-}
-.card-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 700;
+.card:hover {
+  transform: translateY(-4px);
 }
 
-.card-body {
-  padding-top: 2rem;
+.card__icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  margin-bottom: 18px;
+  background: linear-gradient(135deg, rgba(24,169,199,0.14), rgba(24,169,199,0.06));
 }
 
-.quote-section {
-  text-align: center;
-  background-color: gainsboro;
-  padding: 4rem 0;
-  /* background-color: #e8dfd3; */
-  background-color: #878ECD;
-  color: #ffffff;
+.card:nth-child(2) .card__icon {
+  background: linear-gradient(135deg, rgba(242,201,76,0.18), rgba(242,201,76,0.08));
 }
 
-.quote-section ol {
-  text-align: left;
-  /* padding: 0 4rem */
+.card h3 {
+  font-size: 1.45rem;
+  margin-bottom: 12px;
 }
 
-.quote-section h5 {
-  text-align: left;
-  /* padding: 0 4rem 0 4rem; */
+/* ============================================================
+   CTA / Donate Teaser
+   ============================================================ */
+.cta__card {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 34px;
+  align-items: center;
+  background: white;
+  border: 1px solid #e1e9f2;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  padding: 34px;
 }
 
-.contact-us-section {
-  text-align: center;
-  padding: 4rem 0;
-  background-color: #B9BBDF;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+.cta__media img {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  object-fit: cover;
+  border-radius: 22px;
 }
 
-.contact-us-section h1 {
-  text-transform: uppercase;
-  font-weight: 700;
+.cta__content h2 {
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  margin-bottom: 18px;
 }
 
-.contact-us-section h3 {
-  font-weight: 600;
+.cta__content p {
+  font-size: 1.08rem;
+  max-width: 560px;
+  margin-bottom: 26px;
 }
 
-.social-links {
+.cta__buttons {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  column-gap: 1rem;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
-.social-btn {
-  border: 3px solid transparent;
-  color: #212529;
-  border-color: #212529;
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer {
+  margin-top: 34px;
+  background: linear-gradient(180deg, #127e97, #0f6f86);
+  color: white;
+  padding: 28px 0;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer .brand__text,
+.footer a {
+  color: white;
+}
+
+
+.footer__links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
   font-weight: 600;
 }
 
-.email {
-  padding-top: 2.5rem;
-  padding-bottom: 2rem;
+.footer__links a:hover {
+  opacity: 0.8;
 }
 
-.bottom-btn {
-  margin: 0 0.5rem 0 0.5rem;
+/* ============================================================
+   About Page
+   ============================================================ */
+.page-hero {
+  padding: 56px 0 78px;
 }
 
-.about-us-section {
+.page-hero__card {
+  background: white;
+  border: 1px solid #e1e9f2;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  padding: 54px 64px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.page-hero__card h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 26px;
+}
+
+.page-hero__card p + p {
+  margin-top: 18px;
+}
+
+.page-hero__card .back-btn {
+  margin-top: 34px;
+  display: inline-flex;
+}
+
+/* ============================================================
+   Donate Page
+   ============================================================ */
+.donate-section {
+  padding: 56px 0 78px;
+}
+
+.donate-section__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 34px;
+}
+
+.donate-section__heading {
   text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  background-color: #B9BBDF;
-  background-image: url("https://www.transparenttextures.com/patterns/corrugation.png");
 }
 
-.success {
-  text-align: center;
+.donate-section__heading h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 12px;
 }
 
-.failure {
-  text-align: center;
+.donate-section__heading p {
+  max-width: 580px;
+  margin: 0 auto;
+  font-size: 1.08rem;
 }
 
-.failure .email{
-  padding-top: 0
+.donate-section__widget {
+  background: white;
+  border: 1px solid #e1e9f2;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  padding: 34px;
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.blog {
-  text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  background-color: #B9BBDF;
-  background-image: url("https://www.transparenttextures.com/patterns/corrugation.png");
+/* ============================================================
+   Blog Page
+   ============================================================ */
+.blog-section {
+  padding: 56px 0 78px;
 }
 
-.blog h2 {
-  padding: 2rem 0 1rem 0;
-  font-size: 2.5rem;
-  font-weight: 700;
+.blog-post {
+  max-width: 820px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #e1e9f2;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  padding: 54px 64px;
 }
 
-.blog h3 {
-  padding: 0.5rem 0 1rem 0;
-  font-size: 1.3rem;
-  font-weight: 700;
+.blog-post__meta {
+  margin-bottom: 34px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 26px;
 }
 
-.blog img {
-  max-width: 80%;
+.blog-post__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 12px;
+}
+
+.blog-post__date {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.blog-post__body p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.blog-post__image {
+  margin: 26px 0;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.blog-post__image img {
+  width: 100%;
   height: auto;
 }
 
-.blog p {
-  padding-bottom: 2rem;
+.blog-post__back {
+  margin-top: 34px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+
+/* ============================================================
+   Signup / Success / Failure Pages
+   ============================================================ */
+.form-section {
+  padding: 56px 0 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-card {
+  background: white;
+  border: 1px solid #e1e9f2;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  padding: 48px 54px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-card h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: 8px;
+}
+
+.form-card > p {
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 7px;
+  font-size: 0.95rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #d7e3ee;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text);
+  background: #f8fbfe;
+  transition: border-color 0.18s;
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: var(--teal);
+  background: white;
+}
+
+.form-hint {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 5px;
+}
+
+.form-submit {
+  margin-top: 28px;
+  width: 100%;
+}
+
+.status-card {
+  background: white;
+  border: 1px solid #e1e9f2;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  padding: 64px 54px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.status-card h1 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin-bottom: 16px;
+}
+
+.status-card p {
+  margin-bottom: 32px;
+}
+
+.status-card__buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.status-icon {
+  font-size: 3rem;
+  margin-bottom: 18px;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 1060px) {
+  .hero__card,
+  .problem__grid,
+  .cta__card {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__media {
+    min-height: 420px;
+  }
+
+  .impact__grid,
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-hero__card,
+  .blog-post {
+    padding: 42px 40px;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 78px;
+    right: 16px;
+    left: 16px;
+    background: white;
+    border: 1px solid #dfe8f0;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav.nav--open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero__content {
+    padding: 42px 24px;
+  }
+
+  .impact__grid,
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact__item {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .impact__item:last-child {
+    border-bottom: 0;
+  }
+
+  .vision-card__split,
+  .vision-card__labels {
+    grid-template-columns: 1fr;
+  }
+
+  .vision-card__panel {
+    min-height: 260px;
+  }
+
+  .section,
+  .hero {
+    padding: 56px 0;
+  }
+
+  .cta__card {
+    padding: 22px;
+  }
+
+  .cta__media img {
+    min-height: 280px;
+  }
+
+  .page-hero__card,
+  .blog-post,
+  .form-card,
+  .status-card {
+    padding: 32px 24px;
+  }
+
+  .donate-section__widget {
+    padding: 22px;
+  }
+
+  .footer__links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand__text {
+    display: none;
+  }
 }
